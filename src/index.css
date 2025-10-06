@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-900;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-image: radial-gradient(circle, rgba(29, 78, 216, 0.5), rgba(29, 78, 216, 0) 70%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
