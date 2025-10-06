@@ -17,7 +17,7 @@ function App() {
     setCopied(false);
 
     try {
-      const response = await axios.post('http://localhost:8000/uml', {
+      const response = await axios.post('https://uml-chatbot-backend-1.onrender.com', {
         requisito: prompt,
       });
       setUmlCode(response.data.trim());
@@ -25,7 +25,7 @@ function App() {
       console.error("Error al generar el diagrama:", error);
       const errorMessage = `@startuml
 ' Error al conectar con la API.
-' Asegúrate de que el backend está funcionando en http://localhost:8000
+' Asegúrate de que el backend está funcionando en https://uml-chatbot-backend-1.onrender.com
 ' Detalle: ${error.message}
 @enduml`;
       setUmlCode(errorMessage);
