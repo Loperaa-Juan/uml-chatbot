@@ -17,7 +17,7 @@ function App() {
     setCopied(false);
 
     try {
-      const response = await axios.post('https://uml-chatbot-backend-1.onrender.com', {
+      const response = await axios.post('https://uml-chatbot-backend-1.onrender.com/uml', {
         requisito: prompt,
       });
       setUmlCode(response.data.trim());
